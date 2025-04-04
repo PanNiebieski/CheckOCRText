@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="dictionaries_NoUTF-8\pl_PL.aff" />
+		<None Remove="dictionaries_NoUTF-8\pl_PL.dic" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="dictionaries_NoUTF-8\pl_PL.aff">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="dictionaries_NoUTF-8\pl_PL.dic">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="dictionaries_UTF-8\pl_PL.aff">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="dictionaries_UTF-8\pl_PL.dic">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+
+		<PackageReference Include="WeCantSpell.Hunspell" Version="6.0.0" />
+	</ItemGroup>
+
+</Project>
